@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        console.log(document.URL);
+        fetch('/fetch'+'?'+window.location.hash.slice(1))
+        .then(async (data) => {res = await data.json(); document.getElementById('res').innerHTML = res["data"]; console.dir(res["data"])});
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="res">
+        Wait...
+    </div>
+</body>
+</html>
